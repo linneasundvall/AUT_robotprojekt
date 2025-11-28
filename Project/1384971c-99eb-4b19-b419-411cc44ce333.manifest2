@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Manifest manifestSchemaVersion="1" modelSchemaVersion="1">
+  <Application applicationName="sysmac" applicationVersion="Infinity" />
+  <Solution solutionName="Projekt_labyrint" id="1384971c-99eb-4b19-b419-411cc44ce333" trackingId="9977580d-f890-4c03-88cd-77db4f48d05b" solutionSchemaVersion="2">
+    <ApplicationFeatures>
+      <ApplicationFeature name="Ace.Controller" />
+    </ApplicationFeatures>
+  </Solution>
+</Manifest>

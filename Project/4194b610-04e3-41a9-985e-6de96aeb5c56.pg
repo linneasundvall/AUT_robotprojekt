@@ -1,0 +1,70 @@
+﻿.PROGRAM main()
+; Startvärden
+        ATTACH ()
+        SPEED 20 MONITOR ALWAYS
+        READY
+        SET gripper = TRANS(0,0,90)
+        TOOL gripper
+        arbete = TRUE
+        antal_flytt = 0
+        x = 0
+        y = 0
+        x_avs = 24.964
+        y_avs = 24.091
+        open = TRUE
+        close = FALSE
+        CALL gripper(open)
+
+
+;Workframes 
+        SET frame1[0] = TRANS(200,100,127.41,0,180,0) ; första, fjärde
+        SET frame1[1] = frame1[0]:TRANS(120) ; andra
+        SET frame1[2] = frame1[0]:TRANS(,70) ; tredje
+
+
+        SET pickframe = FRAME(frame1[0],frame1[1],frame1[2],frame1[0])
+
+        SET frame2[0] = TRANS(100,200,127.41,0,180,45) ; första, fjärde
+        SET frame2[1] = frame2[0]:TRANS(120) ; andra
+        SET frame2[2] = frame2[0]:TRANS(,70) ; tredje
+
+        SET placeframe = FRAME(frame2[0],frame2[1],frame2[2],frame2[0])
+
+        WHILE arbete DO
+            SET pick = pickframe:TRANS(x*x_avs,y*y_avs)
+            SET place = placeframe:TRANS(x*x_avs,y*y_avs)
+
+            APPROS pick, 30
+            SIGNAL -19, 20
+            MOVES pick
+            BREAK
+            WAIT.EVENT 0.2
+            SIGNAL -20, 19
+            DEPART 30
+
+;labyrint kod
+
+
+            APPROS place, 30
+            MOVES place
+            BREAK
+            WAIT.EVENT 0.2
+            SIGNAL -19, 20
+            DEPART 30
+
+
+
+            x = x+1
+            IF x > 2 THEN
+                x = 0
+                y = y+1
+            END
+            IF y > 3 THEN
+                y = 0
+                arbete = FALSE
+END 
+
+            END
+
+.END
+

@@ -1,0 +1,50 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:AdeptController id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>-1494446578</_a>
+<_b>-25669</_b>
+<_c>17092</_c>
+<_d>184</_d>
+<_e>93</_e>
+<_f>151</_f>
+<_g>219</_g>
+<_h>124</_h>
+<_i>127</_i>
+<_j>45</_j>
+<_k>145</_k>
+</Identifier>
+<IPAddress id="ref-4">127.0.0.1</IPAddress>
+<AutoSetTime>false</AutoSetTime>
+<Enabled>false</Enabled>
+<ControllerModel xsi:type="a3:ControllerModel" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Ace.Communication.Services/Ace.Communication">Unknown</ControllerModel>
+<SerialNumber id="ref-5"></SerialNumber>
+<ControllerType xsi:type="a3:ControllerType" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Ace.Communication.Services/Ace.Communication">Invalid</ControllerType>
+<FpgaVersion>0</FpgaVersion>
+<SoftwareRevision href="#ref-5"/>
+<SystemOptions href="#ref-5"/>
+<SecurityId href="#ref-5"/>
+<TrajectoryRate>0</TrajectoryRate>
+<ControllerTime xsi:type="xsd:dateTime">0001-01-01T00:00:00.0000000+01:00</ControllerTime>
+<EVPFileCache href="#ref-6"/>
+<EncoderPropertiesCount>0</EncoderPropertiesCount>
+</a1:AdeptController>
+<a4:FileCache id="ref-6" xmlns:a4="http://schemas.microsoft.com/clr/nsassem/Ace.Server.Adept.Controllers.Files/Ace">
+<Identifier xsi:type="a2:Guid" xmlns:a2="http://schemas.microsoft.com/clr/ns/System">
+<_a>1891534912</_a>
+<_b>-5573</_b>
+<_c>17279</_c>
+<_d>176</_d>
+<_e>153</_e>
+<_f>174</_f>
+<_g>227</_g>
+<_h>149</_h>
+<_i>1</_i>
+<_j>164</_j>
+<_k>113</_k>
+</Identifier>
+<Count>0</Count>
+<ConfigurationFileName href="#ref-5"/>
+</a4:FileCache>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
