@@ -2,54 +2,65 @@
         CALL init()
 
 
-        SET frame1[0] = jog_pick ; första, fjärde
-        SET frame1[1] = frame1[0]:TRANS(x_avs*x_gri) ; andra
-        SET frame1[2] = frame1[0]:TRANS(,y_avs*y_gri) ; tredje
+        ;SET frame1[0] = jog_pick ; första, fjärde
+        ;SET frame1[1] = frame1[0]:TRANS(x_avs*x_gri) ; andra
+        ;SET frame1[2] = frame1[0]:TRANS(,y_avs*y_gri) ; tredje
 
 
-        SET pickframe = FRAME(frame1[0],frame1[1],frame1[2],frame1[0])
+        ;SET pickframe = FRAME(frame1[0],frame1[1],frame1[2],frame1[0])
 
-        SET frame2[0] = jog_place ; första, fjärde
-        SET frame2[1] = frame2[0]:TRANS(x_avs*x_gri) ; andra
-        SET frame2[2] = frame2[0]:TRANS(,y_avs*y_gri) ; tredje
+        ;SET frame2[0] = jog_place ; första, fjärde
+        ;SET frame2[1] = frame2[0]:TRANS(x_avs*x_gri) ; andra
+        ;SET frame2[2] = frame2[0]:TRANS(,y_avs*y_gri) ; tredje
 
-        SET placeframe = FRAME(frame2[0],frame2[1],frame2[2],frame2[0])
+        ;SET placeframe = FRAME(frame2[0],frame2[1],frame2[2],frame2[0])
 
         WHILE arbete DO
-            SET pick = pickframe:TRANS(x*x_avs,y*y_avs)
-            SET place = placeframe:TRANS(x*x_avs,y*y_avs)
+            ;SET pick = pickframe:TRANS(x*x_avs,y*y_avs)
+            ;SET place = placeframe:TRANS(x*x_avs,y*y_avs)
 
 
 
             RIGHTY
             BREAK
-            APPROS pick, 30
-            CALL gripper(open)
+            ;APPROS pick, 30
+            ;CALL gripper(open)
 
-            MOVE pick
+            ;MOVE pick
             BREAK
             WAIT.EVENT 0.2
-            CALL gripper(close)
-            DEPART 30
+            ;CALL gripper(close)
+            ;DEPART 30
 
 
+            FOR i = 0 TO 12
+                MOVES loc[i]
+                BREAK
+                WAIT.EVENT 0.5
+            END
 
+            MOVES end
+            BREAK
+            WAIT.EVENT 1
 
-
-
+            FOR i = 12 TO 0 STEP -1
+                MOVES loc[i]
+                BREAK
+                WAIT.EVENT 0.5
+            END
 ;labyrint
 
 
             LEFTY
             BREAK
 
-            APPRO place, 30
+            ;APPRO place, 30
 
-            MOVE place
+            ;MOVE place
             BREAK
             WAIT.EVENT 0.2
-            CALL gripper(open)
-            DEPART 30
+            ;CALL gripper(open)
+            ;DEPART 30
 
 ; labyrint tillbaka
 

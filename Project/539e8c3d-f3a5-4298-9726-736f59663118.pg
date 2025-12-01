@@ -1,7 +1,7 @@
 ﻿.PROGRAM init()
 ; Startvärden
         ATTACH ()
-        SPEED 15 MONITOR
+        SPEED 10 MONITOR
         SET gripper = TRANS(0,0,110)
         TOOL gripper
         arbete = TRUE
