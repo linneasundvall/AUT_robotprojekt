@@ -2,18 +2,16 @@
 ; Startvärden
         ATTACH ()
         SPEED 15 MONITOR
-        READY
-        SET gripper = TRANS(0,0,90)
+        SET gripper = TRANS(0,0,110)
         TOOL gripper
         arbete = TRUE
         x = 0
         y = 0
-        summa_x = 0
-        summa_y = 0
 
-        x_avs = 24.5 ; långa sidan
-        y_avs = 25.5 ; korta sidan
-        x_grid = 2
+
+        x_avs = 25 ; långa sidan
+        y_avs = 25 ; korta sidan
+        x_grid = 2 ;3x5
         y_grid = 4
         open = TRUE
         close = FALSE
