@@ -1,0 +1,23 @@
+﻿.PROGRAM testning()
+
+        ATTACH ()
+        SPEED 5 MONITOR
+        summa_x = 0
+        summa_y = 0
+
+
+        MOVE labyrint_start
+        BREAK
+        WAIT.EVENT 10
+
+        CALL shift(0, -85)
+        CALL shift(60, 0)
+        CALL shift(0, -100)
+        CALL shift(-95, 0)
+        CALL shift(0, -85)
+        CALL shift(105, 0)
+        CALL shift(0, -180)
+        CALL shift(-115, 0)
+        CALL shift(0, -150)
+.END
+

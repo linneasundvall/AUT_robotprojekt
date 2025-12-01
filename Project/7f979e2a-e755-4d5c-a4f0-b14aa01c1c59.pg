@@ -3,10 +3,10 @@
         summa_y = summa_y+(off_y)
         summa_x = summa_x+(off_x)
 
-        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
-        MOVE flytta
+        SET flytta = SHIFT(labyrint_start BY summa_x,summa_y)
+        MOVES flytta
         BREAK
-        WAIT.EVENT 0.2
+        WAIT.EVENT 0.5
 
 
 

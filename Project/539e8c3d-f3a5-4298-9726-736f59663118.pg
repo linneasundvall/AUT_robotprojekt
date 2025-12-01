@@ -1,7 +1,7 @@
 ﻿.PROGRAM init()
 ; Startvärden
         ATTACH ()
-        SPEED 30 MONITOR
+        SPEED 15 MONITOR
         READY
         SET gripper = TRANS(0,0,90)
         TOOL gripper
@@ -9,7 +9,7 @@
         x = 0
         y = 0
         summa_x = 0
-summa_y = 0
+        summa_y = 0
 
         x_avs = 24.5 ; långa sidan
         y_avs = 25.5 ; korta sidan

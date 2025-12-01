@@ -1,6 +1,6 @@
 ﻿.PROGRAM main()
-
         CALL init()
+
 
 
 
@@ -37,7 +37,6 @@
 
 
             CALL maze()
-
 
 
 
