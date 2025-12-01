@@ -1,0 +1,14 @@
+﻿.PROGRAM shift(off_x, off_y)
+
+        summa_y = summa_y+(off_y)
+        summa_x = summa_x+(off_x)
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+
+
+
+.END
+

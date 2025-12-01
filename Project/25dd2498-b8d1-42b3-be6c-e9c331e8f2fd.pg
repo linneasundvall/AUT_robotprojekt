@@ -2,8 +2,8 @@
 ;
         IF cmd THEN ; öppnar 
             SIGNAL -19, 20
-        ELSE
-            SIGNAL -20, 19 ; stänger
+        ELSE  ; stänger
+            SIGNAL -20, 19
         END
 
 .END

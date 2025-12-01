@@ -1,0 +1,104 @@
+﻿.PROGRAM maze()
+
+
+        MOVE labyrint[0]
+        BREAK
+        WAIT.EVENT 0.2
+
+;Steg 1
+        summa_y = -100
+        summa_x = 0
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+; Steg 2
+
+        summa_y = summa_y+0
+        summa_x = summa_x+65
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BRAKE
+        WAIT.EVENT 0.2
+; Steg 3
+
+        summa_y = summa_y+(-100)
+        summa_x = summa_x+0
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+; Steg 4
+
+        summa_y = summa_y+0
+        summa_x = summa_x+(-120)
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+; Steg 5
+
+        summa_y = summa_y+(-90)
+        summa_x = summa_x+0
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+; Steg 6
+
+        summa_y = summa_y+0
+        summa_x = summa_x+110
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+
+; Steg 7 
+
+        summa_y = summa_y+(-180)
+        summa_x = summa_x+0
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+
+; Steg 8 
+        summa_y = summa_y+0
+        summa_x = summa_x+(-110)
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+; Steg 9 
+
+        summa_y = summa_y+(-150)
+        summa_x = summa_x+0
+
+        SET flytta = SHIFT(labyrint[0] BY summa_x,summa_y)
+        MOVE flytta
+        BREAK
+        WAIT.EVENT 0.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.END
+
