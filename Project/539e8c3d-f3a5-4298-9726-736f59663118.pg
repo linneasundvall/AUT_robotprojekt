@@ -2,19 +2,19 @@
 
 ; Konstanter
         ATTACH ()
-        SPEED 10 MONITOR
+        SPEED 20 MONITOR
         SET gripper = TRANS(0,0,110)
         TOOL gripper
         y_avs = 25 ; korta sidan
         x_avs = 25 ; långa sidan
-        x_grid = 4 ;5x3
-        y_grid = 2
+        x_grid = 0 ;5x3
+        y_grid = 4
         open = TRUE
         close = FALSE
 
 ; Variabler
-        x = 0
-        y = 0
+        x = 2
+        y = 4 ; testing startrad
         arbete = TRUE
 
 
