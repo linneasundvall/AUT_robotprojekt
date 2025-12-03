@@ -2,18 +2,19 @@
         CALL init() ; Tar in startvärden
 
 ; Locations till pickframe
-        SET frame1[1] = jog_pick ; Location 1, Location 4
-        SET frame1[2] = frame1[0]:TRANS(x_avs*x_gri) ;LOcation 2
-        SET frame1[3] = frame1[0]:TRANS(,y_avs*y_gri) ; Location 3
+        SET frame1[0] = TRANS(39.252,279.681,52.010,0.000,180.000,-0.013)
+        SET frame1[1] = TRANS(39.252,229.681,52.005,0.000,180.000,-0.013) ;LOcation 2
+        SET frame1[2] = TRANS(-60.748,279.681,52.010,0.000,180.000,-0.013) ; Location 3
 
 ; Skapar pickframe
         SET pickframe = FRAME(frame1[0],frame1[1],frame1[2],frame1[0])
 ; LOcations till placeframe
-        SET frame2[1] = jog_place ; första, fjärde
-        SET frame2[2] = frame2[0]:TRANS(x_avs*x_gri) ; andra
-        SET frame2[3] = frame2[0]:TRANS(,y_avs*y_gri) ; tredje
+; Måste ha ~-45 grader förskjutning i roll
+        SET frame2[0] = TRANS(13.745,-189.407,52.000,0.000,180.000,-89.840)
+        SET frame2[1] = TRANS(13.745,-239.407,52.000,0.000,180.000,-89.840)
+        SET frame2[2] = TRANS(-86.255,-18.407,52.000,0.000,180.000,-89.840)
 ; Skapar placeframe
-        SET placeframe = FRAME(frame2[1],frame2[2],frame2[3],frame2[1])
+        SET placeframe = FRAME(frame2[0],frame2[1],frame2[2],frame2[0])
 ; Loop
         WHILE arbete DO
             SET pick = pickframe:TRANS(x*x_avs,y*y_avs) ; Förskjutning från pickframe (origin)
@@ -21,11 +22,11 @@
 
 
 ; Pick
-            RIGHTY
+            RIGHTY ; För att nå på sin vänstra sida
             BREAK
+
             APPROS pick, 30
             CALL gripper(open)
-
             MOVE pick
             BREAK
             WAIT.EVENT 0.2
@@ -41,11 +42,10 @@
 
 
 ; Place
-            LEFTY
+            LEFTY ; För att nå sin höger sida
             BREAK
 
             APPRO place, 30
-
             MOVE place
             BREAK
             WAIT.EVENT 0.2
